@@ -6,28 +6,12 @@ using System.Linq;
 
 namespace AdventOfCode
 {
-    class Program
+    class DayOne
     {
         private static readonly string PATH = Path.GetDirectoryName(Process.GetCurrentProcess().MainModule.FileName) + @"\..\..\..\DayOne\input.txt";
         private static readonly int NUMBER_TO_REACH = 2020;
 
-        static void Main(string[] args)
-        {
-            List<int> inputNumbers = ReadAndProcessFile();
-
-            int solution = FindPartOneSolution(inputNumbers);
-
-            Console.WriteLine("-------------PART ONE---------------");
-            Console.WriteLine(solution);
-            Console.WriteLine("------------------------------------");
-
-            solution = FindPartTwoSolution(inputNumbers);
-
-            Console.WriteLine("-------------PART TWO---------------");
-            Console.WriteLine(solution);
-            Console.WriteLine("------------------------------------");
-        }
-        private static List<int> ReadAndProcessFile()
+        public static List<int> ReadAndProcessFile()
         {
             string[] inputs = File.ReadAllLines(PATH);
             return inputs
@@ -41,13 +25,13 @@ namespace AdventOfCode
             return number;
         }
         
-        private static int FindPartOneSolution(List<int> numberList)
+        public static int FindPartOneSolution(List<int> numberList)
         {
             int foundNumber = numberList.FirstOrDefault(number => numberList.Contains((NUMBER_TO_REACH-number)));
             return foundNumber * (NUMBER_TO_REACH - foundNumber);
         }
 
-        private static int FindPartTwoSolution(List<int> numberList)
+        public static int FindPartTwoSolution(List<int> numberList)
         {
             Solution solution = new Solution();
             bool solutionFound = false;
