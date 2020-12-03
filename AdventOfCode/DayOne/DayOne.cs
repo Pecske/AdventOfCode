@@ -40,7 +40,7 @@ namespace AdventOfCode
                 for (int j = 1; j < numberList.Count-1 && !solutionFound; j++)
                 {
                     int sum = numberList[i] + numberList[j];
-                    if (sum<2020 && numberList.Contains(NUMBER_TO_REACH - sum))
+                    if (sum<NUMBER_TO_REACH && numberList.Contains(NUMBER_TO_REACH - sum))
                     {
                         solution = new Solution(numberList[i],numberList[j],NUMBER_TO_REACH-sum);
                         solutionFound = true;

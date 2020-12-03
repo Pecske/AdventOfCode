@@ -8,8 +8,9 @@ namespace AdventOfCode
     {
         static void Main(string[] args)
         {
-            ExecuteDayOne();
-            ExecuteDayTwo();
+            //   ExecuteDayOne();
+            //   ExecuteDayTwo();
+            ExecuteDayThree();
         }
 
         private static void ExecuteDayOne()
@@ -32,11 +33,19 @@ namespace AdventOfCode
             int solutionTwo = DayTwo.FindPartTwoSolution(passwordPolicies);
 
             WriteToConsole(solutionOne, solutionTwo);
+        }
 
+        private static void ExecuteDayThree()
+        {
+            List<string> inputLines = DayThree.ProcessInput();
+            int solutionOne = DayThree.FindPartOneSolution(inputLines);
+            double solutionTwo = DayThree.FindPartTwoSolution(inputLines);
+
+            WriteToConsole(solutionOne, solutionTwo);
 
         }
 
-        private static void WriteToConsole(int solutionOne, int solutionTwo)
+        private static void WriteToConsole(double solutionOne, double solutionTwo)
         {
             Console.WriteLine("-------------PART ONE---------------");
             Console.WriteLine(solutionOne);
