@@ -10,7 +10,8 @@ namespace AdventOfCode
         {
             //   ExecuteDayOne();
             //   ExecuteDayTwo();
-            ExecuteDayThree();
+            //  ExecuteDayThree();
+              ExecuteDayFour();
         }
 
         private static void ExecuteDayOne()
@@ -41,6 +42,16 @@ namespace AdventOfCode
             int solutionOne = DayThree.FindPartOneSolution(inputLines);
             double solutionTwo = DayThree.FindPartTwoSolution(inputLines);
 
+            WriteToConsole(solutionOne, solutionTwo);
+
+        }
+
+        private static void ExecuteDayFour()
+        {
+            List<Passport> passportList = DayFour.ProcessInput();
+
+            int solutionOne = DayFour.FindPartOneSolution(passportList);
+            int solutionTwo = DayFour.FindPartTwoSolution(passportList);
             WriteToConsole(solutionOne, solutionTwo);
 
         }

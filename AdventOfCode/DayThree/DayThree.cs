@@ -40,7 +40,7 @@ namespace AdventOfCode
         }
 
         private static int GetTrees(Movement movement, List<string> map)
-        {
+        {            
             int column = 0;
             int treeCounter = 0;
             for (int i = movement.Horizontal; i < map.Count; i+=movement.Horizontal)

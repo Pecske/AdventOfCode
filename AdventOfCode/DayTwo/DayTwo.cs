@@ -36,8 +36,8 @@ namespace AdventOfCode
             int firstSeparator = line.IndexOf("-");
             int secondSeparator = line.IndexOf(" ");
 
-            int min =  Convert.ToInt32(line.Substring(0, firstSeparator));
-            int max = Convert.ToInt32(line.Substring(firstSeparator + 1, (secondSeparator-firstSeparator)));
+            int min = Convert.ToInt32(line.Substring(0, firstSeparator));
+            int max = Convert.ToInt32(line.Substring(firstSeparator + 1, (secondSeparator - firstSeparator)));
             char character = Convert.ToChar(line.Substring(secondSeparator + 1, 1));
             firstSeparator = line.IndexOf(":");
             string password = line.Substring(firstSeparator + 2);
@@ -63,7 +63,7 @@ namespace AdventOfCode
                 counter++;
             }
 
-            return MAX_OCCURENCES==counter;
+            return MAX_OCCURENCES == counter;
         }
     }
 }
